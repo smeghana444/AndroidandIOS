@@ -47,10 +47,10 @@ public class BaseClass
          System.out.println(appactivity);
          try {
          URL url = new URL("http://127.0.0.1:4723/wd/hub");
-         System.out.println("install app");
+         System.out.println("install the android app");
          System.out.println(url);
          driver = new AndroidDriver(url, desiredCapabilities);
-         System.out.println("Launch the app");
+         System.out.println("Launch the USGA app in android");
          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
          
          }
@@ -75,10 +75,10 @@ public class BaseClass
             desiredCapabilities.setCapability(MobileCapabilityType.APP,"/Users/someghana/Downloads/USGA QA.ipa");
             desiredCapabilities.setCapability(MobileCapabilityType.UDID,"00008101-000C14D6026B001E");
            URL url = new URL("http://127.0.0.1:4723/wd/hub");
-            System.out.println("install app");
+            System.out.println("install the IOS app");
             System.out.println(url);
             idriver = new IOSDriver(url, desiredCapabilities);
-            System.out.println("Launch the app");
+            System.out.println("Launch the USGA app in IOS");
             idriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		}
         catch(Exception e)
